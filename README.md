@@ -1,5 +1,5 @@
 # tencentcos
-小圈
+
 Tencent Cos Flutter package.
 
 ## Getting Started
