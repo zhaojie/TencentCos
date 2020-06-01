@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:crypto/crypto.dart';
 
-
 class TencentCos {
   Dio dio = Dio();
 
@@ -31,7 +30,7 @@ class TencentCos {
 
     options.headers['Authorization'] =
         sign('put', cosPath, headers: options.headers, params: params);
-    
+
     try {
       options.contentType = getContentType(cosPath);
 
@@ -40,7 +39,8 @@ class TencentCos {
           onSendProgress: progress ??
               (int count, int total) {
                 double progress = (count / total) * 100;
-                if (progress % 5 == 0) print('progress====> ${progress.round()}%');
+                if (progress % 5 == 0)
+                  print('progress====> ${progress.round()}%');
               },
           queryParameters: params,
           options: options);
@@ -62,18 +62,17 @@ class TencentCos {
         suffix == "bmp" ||
         suffix == "jpeg") {
       res = "image/$suffix";
-    } else if (suffix == "mp4"){
+    } else if (suffix == "mp4") {
       res = "video/mp4";
-    }
-    else if(suffix=="txt" || suffix=="md"){
-      res="text/plain";
-    }
-    else {
+    } else if (suffix == "txt" || suffix == "md") {
+      res = "text/plain";
+    } else {
       res = "application/octet-stream";
     }
     return res;
   }
 
+  
   String sign(String httpMethod, String costPath,
       {Map<String, String> headers,
       Map<String, String> params,
