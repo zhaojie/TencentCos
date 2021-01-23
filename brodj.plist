@@ -9,7 +9,7 @@
      <key>kind</key>
      <string>software-package</string>
      <key>url</key>
-     <string>https://cdn-static.zhcerp.com/bbs/brodj.ipa</string>
+     <string>https://xq-static-1255938726.cos.ap-guangzhou.myqcloud.com/bbs/xdGame_release.ipa</string>
     </dict>
     <dict>
      <key>kind</key>
@@ -17,14 +17,14 @@
      <key>need-shine</key>
      <integer>0</integer>
      <key>url</key>
-     <string>https://cdn-static.zhcerp.com/bbs/brodj.icon.png</string>
+     <string>https://xq-static-1255938726.cos.ap-guangzhou.myqcloud.com/bbs/brodj.icon.png</string>
     </dict>
    </array>
    <key>metadata</key>
    <array>
     <dict>
      <key>bundle-identifier</key>
-     <string>com.brodj</string>
+     <string>com.brodjapp</string>
      <key>bundle-version</key>
      <string>1.0.0</string>
      <key>kind</key>
